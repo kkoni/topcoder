@@ -86,6 +86,48 @@ public class CollectionUtils {
         return result;
     }
 
+    public static int[] merge(int[]... ars) {
+        int total = 0;
+        for(int[] ar : ars) {
+            total += ar.length;
+        }
+        int[] result = new int[total];
+        int idx = 0;
+        for(int[] ar : ars) {
+            System.arraycopy(ar, 0, result, idx, ar.length);
+            idx += ar.length;
+        }
+        return result;
+    }
+
+    public static long[] merge(long[]... ars) {
+        int total = 0;
+        for(long[] ar : ars) {
+            total += ar.length;
+        }
+        long[] result = new long[total];
+        int idx = 0;
+        for(long[] ar : ars) {
+            System.arraycopy(ar, 0, result, idx, ar.length);
+            idx += ar.length;
+        }
+        return result;
+    }
+
+    public static double[] merge(double[]... ars) {
+        int total = 0;
+        for(double[] ar : ars) {
+            total += ar.length;
+        }
+        double[] result = new double[total];
+        int idx = 0;
+        for(double[] ar : ars) {
+            System.arraycopy(ar, 0, result, idx, ar.length);
+            idx += ar.length;
+        }
+        return result;
+    }
+
     public static long sum(int... ns) {
         long sum = 0;
         for(int n : ns) {
